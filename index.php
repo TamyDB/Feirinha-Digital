@@ -15,25 +15,24 @@ $form = $_GET['form'] ?? 'login'; // default do 'login'
 </head>
 
 <body class="h-screen font-sans bg-emerald-900 flex items-center justify-center">
-    <div class="w-7/8 max-w-5xl grid grid-cols-2 overflow-hidden rounded-lg shadow-2xl mb-12">
+    <div class="w-7/8 max-w-5xl grid grid-cols-2 overflow-hidden rounded-lg shadow-2xl mb-12 mt-12">
         <div class="relative flex justify-end h-full flex-col text-gray-100 bg-cover bg-[url(./images/background.jpg)] p-8">
             <div class="absolute inset-0 bg-black/25 backdrop-blur-[1px]"></div>
             <h1 class="relative z-10 text-6xl font-bold">Feirinha Digital</h1>
             <p class="relative z-10">Descomplique seu mercado</p>
         </div>
         <main class="bg-white flex items-center justify-center flex-col">
-        <div class="flex flex-col justify-center p-18 w-full mb-18">
-                
+            <div class="flex flex-col justify-center p-18 w-full mb-18">
+                <!-- Toggle Switch -->
                 <?php include "components/form.php"; ?>
-<!-- Toggle Switch -->
                 <div class="flex justify-center mb-6 mt-5">
                     <div class="flex bg-gray-200 rounded-lg p-1">
-                        <button onclick="window.location.href='index.php?form=login'" 
-                                class="px-4 py-2 rounded-md transition-all duration-200 <?php echo $form === 'login' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:text-gray-800'; ?>">
+                        <button onclick="window.location.href='index.php?form=login'"
+                            class="px-4 py-2 rounded-md transition-all duration-200 <?php echo $form === 'login' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:text-gray-800'; ?>">
                             Login
                         </button>
-                        <button onclick="window.location.href='index.php?form=cadastro'" 
-                                class="px-4 py-2 rounded-md transition-all duration-200 <?php echo $form === 'cadastro' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:text-gray-800'; ?>">
+                        <button onclick="window.location.href='index.php?form=cadastro'"
+                            class="px-4 py-2 rounded-md transition-all duration-200 <?php echo $form === 'cadastro' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:text-gray-800'; ?>">
                             Cadastrar
                         </button>
                     </div>
