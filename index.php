@@ -9,7 +9,7 @@ $form = $_GET['form'] ?? 'login'; // default do 'login'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- gambiarra boa! -->
-    <meta http-equiv="refresh" content="2">
+    <!-- <meta http-equiv="refresh" content="2"> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Feirinha Digital</title>
 </head>

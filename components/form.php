@@ -9,7 +9,7 @@ if ($form === 'login'): ?>
             <label for="email">Login:</label>
             <input class="border w-full rounded-sm p-2" name="email" type="text" placeholder="Digite seu email ou usuário">
             <label>Senha:</label>
-            <input class="border w-full rounded-sm p-2" type="text" placeholder="Digite sua senha">
+            <input class="border w-full rounded-sm p-2" type="password" placeholder="Digite sua senha">
             <a href="">Esqueceu sua senha?</a>
             <input class="border p-2 rounded-md g-sky-500 hover:bg-lime-600 cursor-pointer" value="Entrar" type="submit">
         </form>
@@ -22,9 +22,9 @@ if ($form === 'login'): ?>
             <label for="email">Email</label>
             <input class="border w-full rounded-sm p-2" name="email" type="text" placeholder="Digite seu email ou usuário">
             <label>Senha:</label>
-            <input class="border w-full rounded-sm p-2" type="text" placeholder="Digite sua senha">
+            <input class="border w-full rounded-sm p-2" type="password" placeholder="Digite sua senha">
             <label>Confirme sua senha:</label>
-            <input class="border w-full rounded-sm p-2 mb-2" type="text" placeholder="Digite sua senha novamente">
+            <input class="border w-full rounded-sm p-2 mb-2" type="password" placeholder="Digite sua senha novamente">
             <button class="border p-2 rounded-md g-sky-500 hover:bg-lime-500 cursor-pointer" type="submit">Cadastrar</button>
         </form>
     </div>
