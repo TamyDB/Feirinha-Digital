@@ -73,10 +73,10 @@ foreach ($produtos as $produto) {
 
 ?>
 
-<body class="h-screen">
-    <div class="h-full grid grid-cols-3">
-        <div class="flex flex-col col-span-2  p-4 gap-3">
-            <h1 class="text-2xl font-bold">Carrinho</h1>
+<body class="h-screen px-4 pt-2">
+    <h1 class="text-2xl font-bold mb-2">Carrinho</h1>
+    <div class="grid grid-cols-3 gap-4">
+        <div class="flex flex-col col-span-2 gap-3">
             <table class="w-full text-sm text-left rtl:text-right border-1 border-gray-300">
                 <thead class="text-xs uppercase">
                     <tr class="border-b border-gray-300">
@@ -108,7 +108,7 @@ foreach ($produtos as $produto) {
                 </tbody>
             </table>
         </div>
-        <div class="flex flex-col col-span-1 mr-4 mt-15">
+        <div class="flex flex-col col-span-1 mr-4">
             <div class="bg-white p-4 border border-gray-300">
                 <!-- Título -->
                 <h3 class="text-sm font-bold">RESUMO</h3>
