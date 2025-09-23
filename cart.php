@@ -147,7 +147,7 @@ foreach ($produtos as $produto) {
 
                 <!-- Ajuda -->
                 <a href="main.php" class="text-xs text-gray-500 text-center mt-4">
-                    Voltar para main page
+                    Voltar para página principal
                 </a>
             </div>
         </div>
