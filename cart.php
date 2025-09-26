@@ -118,7 +118,7 @@ foreach ($produtos as $produto) {
                 <p class="text-sm">Você tem um cupom promocional?</p>
                 <div class="flex mt-2 mb-4">
                     <input type="text" placeholder="Digite seu cupom" class="flex-1 border border-gray-300 p-2 text-sm" />
-                    <button class="bg-black text-white px-4 text-sm">APLICAR</button>
+                    <button class="cursor-pointer bg-black text-white px-4 text-sm hover:bg-green-600">APLICAR</button>
                 </div>
 
                 <div class="border-b border-black my-2"></div>
@@ -143,7 +143,7 @@ foreach ($produtos as $produto) {
                 <div class="border-b border-black my-2"></div>
 
                 <!-- Botão Checkout -->
-                <button class="w-full bg-black text-white py-2 font-bold mt-2">CHECKOUT</button>
+                <button class="cursor-pointer w-full bg-black text-white py-2 font-bold mt-2 hover:bg-green-600">CHECKOUT</button>
 
                 <!-- Ajuda -->
                 <a href="main.php" class="text-xs text-gray-500 text-center mt-4">

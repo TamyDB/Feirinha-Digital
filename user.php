@@ -136,10 +136,10 @@ foreach ($compras as $compra) {
 
                 <!-- Botões de Ação -->
                 <div class="space-y-2">
-                    <button class="w-full bg-black text-white py-2 text-sm font-bold hover:bg-gray-800">
+                    <button class="cursor-pointer w-full bg-black text-white py-2 text-sm font-bold hover:bg-green-600">
                         EDITAR PERFIL
                     </button>
-                    <button class="w-full border border-black text-black py-2 text-sm font-bold hover:bg-gray-100">
+                    <button class="cursor-pointer w-full border border-black text-black py-2 text-sm font-bold hover:bg-green-50 hover:border-green-500 hover:text-green-600">
                         ALTERAR SENHA
                     </button>
                 </div>
@@ -222,15 +222,15 @@ foreach ($compras as $compra) {
 
                             <!-- Ações -->
                             <div class="flex gap-2 mt-3">
-                                <button class="text-xs bg-black text-white px-3 py-1 hover:bg-gray-800">
+                                <button class="cursor-pointer text-xs bg-black text-white px-3 py-1 hover:bg-green-600">
                                     VER DETALHES
                                 </button>
                                 <?php if ($compra["status"] == "Entregue"): ?>
-                                    <button class="text-xs border border-black text-black px-3 py-1 hover:bg-gray-100">
+                                    <button class="cursor-pointer text-xs border border-black text-black px-3 py-1 hover:bg-green-50 hover:border-green-500 hover:text-green-600">
                                         COMPRAR NOVAMENTE
                                     </button>
                                 <?php elseif ($compra["status"] == "Em trânsito"): ?>
-                                    <button class="text-xs border border-blue-500 text-blue-500 px-3 py-1 hover:bg-blue-50">
+                                    <button class="cursor-pointer text-xs border border-blue-500 text-blue-500 px-3 py-1 hover:bg-green-50 hover:border-green-500 hover:text-green-600">
                                         RASTREAR PEDIDO
                                     </button>
                                 <?php endif; ?>
