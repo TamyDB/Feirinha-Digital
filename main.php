@@ -47,7 +47,7 @@
         
 
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
-    <!-- Carousel wrapper -->
+    <!-- Carousel wrapper (Em inglês msm) -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
         <div class="duration-700 ease-in-out" data-carousel-item>
@@ -70,7 +70,7 @@
             <img src="./images/cenouras.jpg" class="absolute block w-full h-full object-cover" alt="...">
         </div>
     </div>
-    <!-- Slider indicators -->
+    <!-- Indicadores de slider -->
     <div class="absolute z-30 flex bottom-5 left-1/2 space-x-3 rtl:space-x-reverse" style="transform: translateX(calc(-50% + 32px));">
         <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
@@ -78,7 +78,7 @@
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
-    <!-- Slider controls -->
+    <!-- Controles de sliders -->
     <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
         <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -97,7 +97,7 @@
     </button>
 </div>
 
-<!-- Products Grid Section -->
+<!-- Seção de produtos (grid) -->
 <section class="py-16 px-4 lg:px-6">
     <div class="mx-auto max-w-screen-xl">
         <div class="text-center mb-12">
@@ -105,9 +105,9 @@
             <p class="text-lg text-gray-600 dark:text-white">Frescos e selecionados especialmente para você</p>
         </div>
         
-        <!-- Products Grid -->
+        <!-- Grid de produtoos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Product Card 1 - Tomates -->
+            <!-- Card de produto 1 - Tomates -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/tomates.jpeg" alt="Tomates" class="w-full h-48 object-cover">
@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Product Card 2 - Batatas -->
+            <!-- Card de produto 2 - Batatas -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/batatas.jpg" alt="Batatas" class="w-full h-48 object-cover">
@@ -141,7 +141,7 @@
                 </div>
             </div>
 
-            <!-- Product Card 3 - Beterrabas -->
+            <!-- Card de produto 3 - Beterrabas -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/beterrabas.jpeg" alt="Beterrabas" class="w-full h-48 object-cover">
@@ -158,7 +158,7 @@
                 </div>
             </div>
 
-            <!-- Product Card 4 - Pimentões -->
+            <!-- Card de produto 4 - Pimentões -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/pimentoes.jpeg" alt="Pimentões" class="w-full h-48 object-cover">
@@ -175,7 +175,7 @@
                 </div>
             </div>
 
-            <!-- Product Card 5 - Cenouras -->
+            <!-- Card de produto 5 - Cenouras -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/cenouras.jpg" alt="Cenouras" class="w-full h-48 object-cover">
@@ -192,7 +192,7 @@
                 </div>
             </div>
 
-            <!-- Product Card 6 - Alface -->
+            <!-- Card de produto 6 - Alface -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
                     <img src="./images/Alface.jpeg" alt="Alface" class="w-full h-48 object-cover">

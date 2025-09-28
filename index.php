@@ -23,7 +23,7 @@ $form = $_GET['form'] ?? 'login'; // default do 'login'
         </div>
         <main class="bg-white flex items-center justify-center flex-col">
             <div class="flex flex-col justify-center p-18 w-full">
-                <!-- Toggle Switch -->
+                <!-- Toggle Switch (Em inglês msm) -->
                 <?php include "components/form.php"; ?>
                 <div class="flex justify-center mb-6 mt-5">
                     <div class="flex bg-gray-200 rounded-lg p-1">

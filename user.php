@@ -277,21 +277,6 @@ foreach ($compras as $compra) {
                     </a>
                 </div>
             </div>
-
-            <!-- Links de Navegação -->
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="cart.php" class="text-xs text-gray-500 hover:text-black">
-                    Ir para o Carrinho
-                </a>
-                <span class="text-xs text-gray-300">|</span>
-                <a href="main.php" class="text-xs text-gray-500 hover:text-black">
-                    Voltar para página principal
-                </a>
-                <span class="text-xs text-gray-300">|</span>
-                <a href="index.php" class="text-xs text-gray-500 hover:text-black">
-                    Sair da conta
-                </a>
-            </div>
         </div>
     </div>
 </body>
