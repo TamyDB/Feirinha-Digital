@@ -117,7 +117,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Frescos e suculentos, perfeitos para saladas e molhos</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 4,99/kg</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -134,7 +134,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Batatas frescas, ideais para fritas e purês</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 3,50/kg</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -151,7 +151,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Beterrabas orgânicas, ricas em nutrientes</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 6,99/kg</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -168,7 +168,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Pimentões coloridos, perfeitos para refogados</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 7,50/kg</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -185,7 +185,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Cenouras crocantes, ricas em vitamina A</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 2,99/kg</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -202,7 +202,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Alface fresca, perfeita para saladas</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 1,99/un</span>
-                        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>

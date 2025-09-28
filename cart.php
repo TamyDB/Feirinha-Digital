@@ -105,7 +105,7 @@ foreach ($produtos as $produto) {
     </nav>
 
 
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-3 gap-4 p-4">
         <div class="flex flex-col col-span-2 gap-3">
             <table class="w-full text-sm text-left rtl:text-right border-1 border-gray-300">
                 <thead class="text-xs uppercase">

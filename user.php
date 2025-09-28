@@ -120,12 +120,12 @@ foreach ($compras as $compra) {
 
 
     <!-- Header -->
-    <div class="mb-6">
-        <h1 class="text-3xl font-bold mb-2">Meu Perfil</h1>
+    <div class="mb-6 pt-4">
+        <h1 class="text-center text-3xl font-bold mb-2">Meu Perfil</h1>
         <div class="border-b border-gray-300"></div>
     </div>
 
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-3 gap-6 p-4">
         <!-- Coluna Esquerda - Informações do Perfil -->
         <div class="col-span-1">
             <!-- Card do Perfil -->
@@ -268,13 +268,6 @@ foreach ($compras as $compra) {
                             </div>
                         </div>
                     <?php endforeach; ?>
-                </div>
-
-                <!-- Link para Ver Mais -->
-                <div class="text-center mt-6">
-                    <a href="#" class="text-sm text-gray-600 hover:text-black underline">
-                        Ver todo o histórico de compras →
-                    </a>
                 </div>
             </div>
         </div>
