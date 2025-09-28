@@ -16,7 +16,7 @@
     <header>
     <nav class="bg-lime-500 border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://flowbite.com" class="flex items-center">
+            <a href="#" class="flex items-center">
                 <img src="./images/carrot-icon-vector-on-white-600nw-2545949249-removebg-preview.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Feirinha Digital</span>
             </a>
@@ -34,10 +34,10 @@
                         <a href="#" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-white lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">User</a>
+                        <a href="user.php" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Usuário</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Cart</a>
+                        <a href="cart.php" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Carrinho</a>
                     </li>
                 </ul>
             </div>
