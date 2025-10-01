@@ -117,7 +117,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Frescos e suculentos, perfeitos para saladas e molhos</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 4,99/kg</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -134,7 +134,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Batatas frescas, ideais para fritas e purês</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 3,50/kg</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -151,7 +151,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Beterrabas orgânicas, ricas em nutrientes</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 6,99/kg</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -168,7 +168,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Pimentões coloridos, perfeitos para refogados</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 7,50/kg</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -185,7 +185,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Cenouras crocantes, ricas em vitamina A</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 2,99/kg</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -202,7 +202,7 @@
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Alface fresca, perfeita para saladas</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-bold text-green-600">R$ 1,99/un</span>
-                        <button class="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+                        <button class="cursor-pointer bg-green-500 lg:dark:hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200">
                             Adicionar
                         </button>
                     </div>
@@ -212,6 +212,62 @@
         </div>
     </div>
 </section>
+
+<!-- Sessão de contato -->
+<section class="py-16 px-4 lg:px-6 bg-lime-500">
+    <div class="mx-auto max-w-screen-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Contate-nos</h2>
+            <p class="text-lg text-gray-800">Alguma pergunta ou dúvida? Apenas mande para nós uma mensagem!</p>
+        </div>
+        
+        <div class="max-w-md mx-auto">
+            <form class="space-y-6" method="POST" action="">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Preencha com um email" 
+                               class="w-full px-4 py-3 rounded-xl bg-gray-100 border-0 focus:ring-2 focus:ring-teal-500 focus:bg-white transition-colors duration-200" 
+                               required>
+                    </div>
+                    <div class="flex-1">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Preencha com seu nome" 
+                               class="w-full px-4 py-3 rounded-xl bg-gray-100 border-0 focus:ring-2 focus:ring-teal-500 focus:bg-white transition-colors duration-200" 
+                               required>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" name="submit_contact" 
+                            class="w-full bg-green-500 lg:dark:hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 uppercase">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<?php
+// Envio
+if (isset($_POST['submit_contact'])) {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
+    
+    // Validação básica 
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($name)) {
+        // Por agora tem um mensagem de sucesso
+        echo '<div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+                <p>Obrigado pela sua mensagem, ' . $name . '! Retornaremos em breve.</p>
+              </div>';
+    } else {
+        echo '<div class="fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+                <p>Por favor bote um email e nome válido.</p>
+              </div>';
+    }
+}
+?>
 
 </body>
 
