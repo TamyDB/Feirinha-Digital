@@ -31,13 +31,13 @@
             <div class="hidden relative items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-white lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700" aria-current="page">Home</a>
+                        <a href="main.php" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-white lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700" aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="user.php" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Usuário</a>
                     </li>
                     <li>
-                        <a class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Carrinho</a>
+                        <a href="cart.php" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Carrinho</a>
                     </li>
                 </ul>
             </div>
@@ -46,12 +46,12 @@
 </header>
         
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="default-carousel" class="relative w-full h-140" data-carousel="slide">
     <!-- Carousel wrapper (Em inglês msm) -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-140">
          <!-- Item 1 -->
         <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src="./images/tomates.jpeg" class="absolute block w-full h-full object-cover" alt="...">
+            <img src="./images/tomates.jpg" class="absolute block w-full h-full object-cover" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="duration-700 ease-in-out" data-carousel-item>
@@ -63,11 +63,11 @@
         </div>
         <!-- Item 4 -->
         <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src="./images/pimentoes.jpeg" class="absolute block w-full h-full object-cover" alt="...">
+            <img src="./images/pimentoes.jpg" class="absolute block w-full h-full object-cover" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src="./images/cenouras.jpg" class="absolute block w-full h-full object-cover" alt="...">
+            <img src="./images/laranjas.jpg" class="absolute block w-full h-full object-cover" alt="...">
         </div>
     </div>
     <!-- Indicadores de slider -->
@@ -98,7 +98,7 @@
 </div>
 
 <!-- Seção de produtos (grid) -->
-<section class="py-16 px-4 lg:px-6">
+<section class="py-8 px-4 lg:px-6">
     <div class="mx-auto max-w-screen-xl">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Nossos Produtos</h2>
@@ -110,7 +110,7 @@
             <!-- Card de produto 1 - Tomates -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
-                    <img src="./images/tomates.jpeg" alt="Tomates" class="w-full h-48 object-cover">
+                    <img src="./images/tomates.jpg" alt="Tomates" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Tomates</h3>
@@ -161,7 +161,7 @@
             <!-- Card de produto 4 - Pimentões -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
-                    <img src="./images/pimentoes.jpeg" alt="Pimentões" class="w-full h-48 object-cover">
+                    <img src="./images/pimentoes.jpg" alt="Pimentões" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Pimentões</h3>
@@ -178,7 +178,7 @@
             <!-- Card de produto 5 - Cenouras -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div class="aspect-w-16 aspect-h-12">
-                    <img src="./images/cenouras.jpg" alt="Cenouras" class="w-full h-48 object-cover">
+                    <img src="./images/laranjas.jpg" alt="Cenouras" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-4">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Cenouras</h3>
@@ -212,7 +212,27 @@
         </div>
     </div>
 </section>
-
+<section class="grid grid-cols-2 h-180 bg-lime-200 text-black">
+    <img class="w-full h-180 object-cover object-center" src="./images/logo.jpg" alt="">
+    <div class="flex flex-col text-center p-8">
+        <h1 class="text-4xl font-bold mt-2">Sobre nós</h1>
+        <h2 class="text-2xl font-bold mt-8 text-left">Frescor e qualidade direto do produtor para sua casa</h2>
+        <p class="mt-4 text-left">Somos uma empresa apaixonada por alimentação saudável e qualidade de vida. Nascemos da vontade de conectar pequenos e médios produtores rurais diretamente aos consumidores que buscam produtos frescos, orgânicos e cheios de sabor.
+Trabalhamos incansavelmente para selecionar os melhores tomates, batatas, beterrabas, pimentões, cenouras e alfaces, garantindo que cada item chegue à sua mesa com o máximo de frescor e nutrientes. Nossa logística ágil permite que você receba produtos colhidos há poucas horas, preservando toda a crocância, aroma e sabor que só alimentos verdadeiramente frescos podem oferecer.</p>
+        <h2 class="text-2xl font-bold mt-6 text-left">Nosso compromisso:</h2>
+        <ul class="mt-4 text-left">
+            <li class="list-disc mt-1 ml-3">Produtos selecionados com rigor e carinho</li>
+            <li class="list-disc mt-1 ml-3">Preços justos para você e para os produtores</li>
+            <li class="list-disc mt-1 ml-3">Entrega rápida e sustentável</li>
+            <li class="list-disc mt-1 ml-3">Apoio à agricultura familiar e local</li>
+        </ul>
+        <p class="mt-4 text-left">Acreditamos que comer bem é um direito de todos. Por isso, tornamos a compra de hortifruti online simples, prática e acessível. Basta alguns cliques e seus vegetais favoritos estão a caminho de sua cozinha.</p>
+        <h2 class="text-2xl font-bold mt-6">Venha fazer parte dessa revolução verde! 🌱</h2>
+    </div>
+</section>
+<section>
+    
+</section>
 </body>
 
 </html>
