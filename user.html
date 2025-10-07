@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Perfil - Feirinha Digital</title>
+</head>
+
+<body class="h-screen bg-gray-50">
+    <nav class="bg-lime-500 border-gray-200 px-4 lg:px-6 py-2.5">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a href="#" class="flex items-center">
+                <img src="./images/carrot-icon-vector-on-white-600nw-2545949249-removebg-preview.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Feirinha Digital</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <a href="index.html" class="dark:text-green-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-green-600 lg:dark:hover:text-white focus:outline-none dark:focus:ring-gray-800">Log out</a>
+                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="hidden relative items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+                    <li>
+                        <a href="products.html" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-white lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700" aria-current="page">Usuário</a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Carrinho</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-6 pt-4">
+        <h1 class="text-center text-3xl font-bold mb-2">Meu Perfil</h1>
+        <div class="border-b border-gray-300"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+        <!-- Coluna Esquerda - Informações do Perfil -->
+        <div class="col-span-1">
+            <!-- Card do Perfil -->
+            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-sm">
+                <!-- Foto de Perfil -->
+                <div class="flex flex-col items-center mb-4">
+                    <img id="userPhoto" src="https://i.pravatar.cc/150?img=2"
+                        alt="Foto do usuário"
+                        class="w-32 h-32 rounded-full border-4 border-gray-200 mb-3">
+                    <h2 id="userName" class="text-xl font-bold text-center">João Silva</h2>
+                    <p id="userSince" class="text-sm text-gray-500">Cliente desde 15/01/2024</p>
+                </div>
+
+                <div class="border-b border-gray-200 my-4"></div>
+
+                <!-- Informações Pessoais -->
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase">Email</p>
+                        <p id="userEmail" class="text-sm font-medium">joao.silva@email.com</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase">Telefone</p>
+                        <p id="userPhone" class="text-sm font-medium">(71) 98765-4321</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase">CPF</p>
+                        <p id="userCPF" class="text-sm font-medium">123.456.789-00</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase">Endereço</p>
+                        <p id="userAddress" class="text-sm font-medium">Rua das Flores, 123 - Barra</p>
+                        <p id="userCity" class="text-sm">Salvador - BA</p>
+                        <p id="userCEP" class="text-sm">CEP: 40140-000</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200 my-4"></div>
+
+                <!-- Botões de Ação -->
+                <div class="space-y-2">
+                    <button id="btnEditProfile" class="cursor-pointer w-full bg-black text-white py-2 text-sm font-bold hover:bg-green-600 transition-colors">
+                        EDITAR PERFIL
+                    </button>
+                    <button id="btnChangePassword" class="cursor-pointer w-full border border-black text-black py-2 text-sm font-bold hover:bg-green-50 hover:border-green-500 hover:text-green-600 transition-colors">
+                        ALTERAR SENHA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card de Estatísticas -->
+            <div class="bg-white p-4 border border-gray-300 rounded-lg shadow-sm mt-4">
+                <h3 class="text-sm font-bold mb-3">ESTATÍSTICAS</h3>
+                <div class="space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">Total de Pedidos:</span>
+                        <span id="totalOrders" class="text-sm font-bold">4</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">Total Gasto:</span>
+                        <span id="totalSpent" class="text-sm font-bold">R$ 526,85</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">Média por Pedido:</span>
+                        <span id="avgOrder" class="text-sm font-bold">R$ 131,71</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna Direita - Histórico de Compras -->
+        <div class="col-span-1 lg:col-span-2">
+            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-sm">
+                <h3 class="text-lg font-bold mb-4">COMPRAS RECENTES</h3>
+
+                <!-- Lista de Compras -->
+                <div id="ordersList" class="space-y-4">
+                    <!-- Os pedidos serão inseridos aqui dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de notificação -->
+    <div id="toast" class="fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300"></div>
+
+    <!-- Modal de Editar Perfil -->
+    <div id="editModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <h2 class="text-xl font-bold mb-4">Editar Perfil</h2>
+            <form id="editForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Nome</label>
+                    <input type="text" id="editName" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Telefone</label>
+                    <input type="tel" id="editPhone" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Endereço</label>
+                    <input type="text" id="editAddress" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                </div>
+                <div class="flex gap-2 mt-6">
+                    <button type="submit" class="flex-1 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition-colors">
+                        Salvar
+                    </button>
+                    <button type="button" id="closeModal" class="flex-1 border border-gray-300 py-2 rounded hover:bg-gray-50 transition-colors">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Dados do usuário
+        const usuario = {
+            nome: "João Silva",
+            email: "joao.silva@email.com",
+            telefone: "(71) 98765-4321",
+            cpf: "123.456.789-00",
+            endereco: "Rua das Flores, 123 - Barra",
+            cidade: "Salvador - BA",
+            cep: "40140-000",
+            data_cadastro: "15/01/2024",
+            foto: "https://i.pravatar.cc/150?img=2"
+        };
+
+        // Histórico de compras
+        const compras = [
+            {
+                numero_pedido: "#2024001",
+                data: "20/12/2024",
+                status: "Entregue",
+                total: 145.67,
+                itens: 8,
+                produtos: [
+                    "Arroz Tio João 5kg",
+                    "Feijão Carioca Kicaldo 1kg",
+                    "Leite Integral Italac 1L (x3)",
+                    "Pão Francês 1kg",
+                    "Outros..."
+                ]
+            },
+            {
+                numero_pedido: "#2024002",
+                data: "05/01/2025",
+                status: "Entregue",
+                total: 89.90,
+                itens: 5,
+                produtos: [
+                    "Coca-cola Zero 2L (x2)",
+                    "Biscoito Wafer Bauducco 90g",
+                    "Queijo Mussarela Fatiado 500g",
+                    "Detergente Ypê Neutro 500ml"
+                ]
+            },
+            {
+                numero_pedido: "#2024003",
+                data: "18/01/2025",
+                status: "Em trânsito",
+                total: 234.50,
+                itens: 12,
+                produtos: [
+                    "Arroz Tio João 5kg (x2)",
+                    "Feijão Carioca Kicaldo 1kg (x2)",
+                    "Leite Integral Italac 1L (x6)",
+                    "Outros..."
+                ]
+            },
+            {
+                numero_pedido: "#2024004",
+                data: "22/01/2025",
+                status: "Processando",
+                total: 56.78,
+                itens: 4,
+                produtos: [
+                    "Sabonete Dove 90g (x3)",
+                    "Pão Francês 1kg"
+                ]
+            }
+        ];
+
+        // Função para formatar moeda
+        function formatarMoeda(valor) {
+            return `R$ ${valor.toFixed(2).replace('.', ',')}`;
+        }
+
+        // Função para mostrar toast
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform transition-transform duration-300 ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            } text-white`;
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 10);
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(120%)';
+            }, 3000);
+        }
+
+        // Função para obter classe de status
+        function getStatusClass(status) {
+            switch (status) {
+                case "Entregue":
+                    return "bg-green-100 text-green-800";
+                case "Em trânsito":
+                    return "bg-blue-100 text-blue-800";
+                case "Processando":
+                    return "bg-yellow-100 text-yellow-800";
+                default:
+                    return "bg-gray-100 text-gray-800";
+            }
+        }
+
+        // Função para renderizar pedidos
+        function renderizarPedidos() {
+            const ordersList = document.getElementById('ordersList');
+            ordersList.innerHTML = '';
+            
+            compras.forEach((compra, index) => {
+                const produtosDisplay = compra.produtos.slice(0, 3).join(' • ');
+                const produtosExtra = compra.produtos.length > 3 ? ' • ...' : '';
+                
+                const orderCard = document.createElement('div');
+                orderCard.className = 'border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow';
+                orderCard.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold text-sm">${compra.numero_pedido}</span>
+                                <span class="px-2 py-1 text-xs rounded-full ${getStatusClass(compra.status)}">
+                                    ${compra.status}
+                                </span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Data: ${compra.data}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-bold text-lg">${formatarMoeda(compra.total)}</p>
+                            <p class="text-xs text-gray-500">${compra.itens} itens</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t pt-3">
+                        <p class="text-xs text-gray-600 mb-2">Produtos:</p>
+                        <div class="text-sm text-gray-700">
+                            ${produtosDisplay}${produtosExtra}
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 mt-3">
+                        <button onclick="verDetalhes('${compra.numero_pedido}')" class="cursor-pointer text-xs bg-black text-white px-3 py-1 hover:bg-green-600 transition-colors">
+                            VER DETALHES
+                        </button>
+                        ${compra.status === "Entregue" ? `
+                            <button onclick="comprarNovamente('${compra.numero_pedido}')" class="cursor-pointer text-xs border border-black text-black px-3 py-1 hover:bg-green-50 hover:border-green-500 hover:text-green-600 transition-colors">
+                                COMPRAR NOVAMENTE
+                            </button>
+                        ` : ''}
+                        ${compra.status === "Em trânsito" ? `
+                            <button onclick="rastrearPedido('${compra.numero_pedido}')" class="cursor-pointer text-xs border border-blue-500 text-blue-500 px-3 py-1 hover:bg-blue-50 transition-colors">
+                                RASTREAR PEDIDO
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+                ordersList.appendChild(orderCard);
+            });
+        }
+
+        // Função para calcular estatísticas
+        function calcularEstatisticas() {
+            const totalPedidos = compras.length;
+            const totalGasto = compras.reduce((sum, compra) => sum + compra.total, 0);
+            const mediaPedido = totalGasto / totalPedidos;
+            
+            document.getElementById('totalOrders').textContent = totalPedidos;
+            document.getElementById('totalSpent').textContent = formatarMoeda(totalGasto);
+            document.getElementById('avgOrder').textContent = formatarMoeda(mediaPedido);
+        }
+
+        // Funções de ação dos pedidos
+        function verDetalhes(numeroPedido) {
+            console.log('Ver detalhes do pedido:', numeroPedido);
+            showToast('Visualizando detalhes do pedido ' + numeroPedido);
+        }
+
+        function comprarNovamente(numeroPedido) {
+            console.log('Comprar novamente pedido:', numeroPedido);
+            showToast('Produtos adicionados ao carrinho!');
+        }
+
+        function rastrearPedido(numeroPedido) {
+            console.log('Rastrear pedido:', numeroPedido);
+            showToast('Abrindo rastreamento do pedido ' + numeroPedido);
+        }
+
+        // Modal de editar perfil
+        const editModal = document.getElementById('editModal');
+        const editForm = document.getElementById('editForm');
+        
+        document.getElementById('btnEditProfile').addEventListener('click', () => {
+            document.getElementById('editName').value = usuario.nome;
+            document.getElementById('editPhone').value = usuario.telefone;
+            document.getElementById('editAddress').value = usuario.endereco;
+            editModal.classList.remove('hidden');
+        });
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            editModal.classList.add('hidden');
+        });
+
+        editForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            usuario.nome = document.getElementById('editName').value;
+            usuario.telefone = document.getElementById('editPhone').value;
+            usuario.endereco = document.getElementById('editAddress').value;
+            
+            document.getElementById('userName').textContent = usuario.nome;
+            document.getElementById('userPhone').textContent = usuario.telefone;
+            document.getElementById('userAddress').textContent = usuario.endereco;
+            
+            editModal.classList.add('hidden');
+            showToast('Perfil atualizado com sucesso!');
+            console.log('Perfil atualizado:', usuario);
+        });
+
+        document.getElementById('btnChangePassword').addEventListener('click', () => {
+            showToast('Funcionalidade de alterar senha em desenvolvimento');
+        });
+
+        // Tornar funções globais
+        window.verDetalhes = verDetalhes;
+        window.comprarNovamente = comprarNovamente;
+        window.rastrearPedido = rastrearPedido;
+
+        // Inicializar página
+        renderizarPedidos();
+        calcularEstatisticas();
+    </script>
+</body>
+
+</html>

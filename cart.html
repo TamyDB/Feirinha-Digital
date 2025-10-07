@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Feirinha Digital - Carrinho</title>
+</head>
+
+<body class="h-screen bg-gray-50">
+    <nav class="bg-lime-500 border-gray-200 px-4 lg:px-6 py-2.5">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a href="#" class="flex items-center">
+                <img src="./images/carrot-icon-vector-on-white-600nw-2545949249-removebg-preview.png" class="mr-3 h-6 sm:h-9" alt="Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Feirinha Digital</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <a href="index.html" class="dark:text-green-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-green-600 lg:dark:hover:text-white focus:outline-none dark:focus:ring-gray-800">Log out</a>
+                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="hidden relative items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+                    <li>
+                        <a href="products.html" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="user.html" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-green-800 lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700">Usuário</a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-green-600 lg:hover:bg-green-600 lg:border-0 lg:hover:text-white lg:px-4 lg:py-2 lg:rounded-lg dark:text-white lg:dark:hover:text-white dark:hover:bg-green-600 dark:hover:text-white lg:dark:hover:bg-green-600 dark:border-gray-700" aria-current="page">Carrinho</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+        <div class="flex flex-col col-span-1 lg:col-span-2 gap-3">
+            <table class="w-full text-sm text-left rtl:text-right border border-gray-300 bg-white">
+                <thead class="text-xs uppercase bg-gray-100">
+                    <tr class="border-b border-gray-300">
+                        <th scope="col" class="px-6 py-3">
+                            Nome do Produto
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Categoria
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Preço
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Ações
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                    <!-- Os produtos serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+            <div id="emptyCart" class="hidden text-center py-8 text-gray-500">
+                <p class="text-lg">Seu carrinho está vazio</p>
+                <a href="products.html" class="text-green-600 hover:text-green-700 mt-2 inline-block">Continuar comprando</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col col-span-1 lg:mr-4">
+            <div class="bg-white p-4 border border-gray-300 shadow-sm">
+                <!-- Título -->
+                <h3 class="text-sm font-bold">RESUMO</h3>
+                <div class="border-b border-black my-2"></div>
+
+                <!-- Cupom -->
+                <p class="text-sm">Você tem um cupom promocional?</p>
+                <div class="flex mt-2 mb-4">
+                    <input type="text" id="couponInput" placeholder="Digite seu cupom" class="flex-1 border border-gray-300 p-2 text-sm" />
+                    <button id="applyCoupon" class="cursor-pointer bg-black text-white px-4 text-sm hover:bg-green-600 transition-colors">APLICAR</button>
+                </div>
+
+                <div id="couponMessage" class="text-sm mb-2 hidden"></div>
+
+                <div class="border-b border-black my-2"></div>
+
+                <!-- Valores -->
+                <div class="flex justify-between text-sm my-1">
+                    <span class="font-bold">SUBTOTAL</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="flex justify-between text-sm my-1">
+                    <span>Entrega</span>
+                    <span id="delivery">R$ 0,00</span>
+                </div>
+                <div class="flex justify-between text-sm my-1 hidden" id="discountRow">
+                    <span class="text-green-600">Desconto</span>
+                    <span id="discount" class="text-green-600">- R$ 0,00</span>
+                </div>
+
+                <div class="border-b border-black my-2"></div>
+
+                <div class="flex justify-between text-sm my-2">
+                    <span class="font-bold">TOTAL</span>
+                    <span id="total" class="font-bold">R$ 0,00</span>
+                </div>
+
+                <div class="border-b border-black my-2"></div>
+
+                <!-- Botão Checkout -->
+                <button id="checkoutBtn" class="cursor-pointer w-full bg-black text-white py-2 font-bold mt-2 hover:bg-green-600 transition-colors">CHECKOUT</button>
+
+                <!-- Ajuda -->
+                <a href="products.html" class="block text-xs text-gray-500 text-center mt-4 hover:text-gray-700">
+                    Voltar para página principal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de notificação -->
+    <div id="toast" class="fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300"></div>
+
+    <script>
+        // Dados dos produtos (simulando dados do servidor)
+        const produtos = [
+            {
+                nome: "Coca-cola Zero 2L",
+                categoria: "Bebidas",
+                preco: 4.99
+            },
+            {
+                nome: "Biscoito Wafer Bauducco 90g",
+                categoria: "Mercearia",
+                preco: 19.99
+            },
+            {
+                nome: "Panetonne Santa Dulce",
+                categoria: "Padaria",
+                preco: 0.99
+            },
+            {
+                nome: "Arroz Tio João 5kg",
+                categoria: "Mercearia",
+                preco: 21.50
+            },
+            {
+                nome: "Feijão Carioca Kicaldo 1kg",
+                categoria: "Mercearia",
+                preco: 7.20
+            },
+            {
+                nome: "Leite Integral Italac 1L",
+                categoria: "Laticínios",
+                preco: 4.39
+            },
+            {
+                nome: "Queijo Mussarela Fatiado 500g",
+                categoria: "Laticínios",
+                preco: 18.90
+            },
+            {
+                nome: "Pão Francês 1kg",
+                categoria: "Padaria",
+                preco: 12.00
+            },
+            {
+                nome: "Sabonete Dove 90g",
+                categoria: "Higiene",
+                preco: 3.79
+            },
+            {
+                nome: "Detergente Ypê Neutro 500ml",
+                categoria: "Limpeza",
+                preco: 2.49
+            }
+        ];
+
+        let carrinho = [...produtos]; // Cópia dos produtos
+        let delivery = 0.00;
+        let desconto = 0;
+
+        // Cupons válidos
+        const cuponsValidos = {
+            'DESCONTO10': 0.10,
+            'DESCONTO20': 0.20,
+            'FRETE': 'frete'
+        };
+
+        // Função para formatar moeda
+        function formatarMoeda(valor) {
+            return `R$ ${valor.toFixed(2).replace('.', ',')}`;
+        }
+
+        // Função para mostrar toast
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transform transition-transform duration-300 ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            } text-white`;
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(0)';
+            }, 10);
+            
+            setTimeout(() => {
+                toast.style.transform = 'translateX(120%)';
+            }, 3000);
+        }
+
+        // Função para renderizar o carrinho
+        function renderizarCarrinho() {
+            const tbody = document.getElementById('cartTableBody');
+            const emptyCart = document.getElementById('emptyCart');
+            
+            if (carrinho.length === 0) {
+                tbody.innerHTML = '';
+                emptyCart.classList.remove('hidden');
+                return;
+            }
+            
+            emptyCart.classList.add('hidden');
+            tbody.innerHTML = '';
+            
+            carrinho.forEach((produto, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-200 hover:bg-gray-50';
+                tr.innerHTML = `
+                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                        ${produto.nome}
+                    </th>
+                    <td class="px-6 py-4">
+                        ${produto.categoria}
+                    </td>
+                    <td class="px-6 py-4">
+                        ${formatarMoeda(produto.preco)}
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <button onclick="removerProduto(${index})" class="text-red-600 hover:text-red-800 font-medium">
+                            Remover
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            
+            atualizarResumo();
+        }
+
+        // Função para remover produto
+        function removerProduto(index) {
+            const produtoRemovido = carrinho[index];
+            carrinho.splice(index, 1);
+            renderizarCarrinho();
+            showToast(`${produtoRemovido.nome} removido do carrinho`, 'success');
+        }
+
+        // Função para calcular subtotal
+        function calcularSubtotal() {
+            return carrinho.reduce((total, produto) => total + produto.preco, 0);
+        }
+
+        // Função para atualizar o resumo
+        function atualizarResumo() {
+            const subtotal = calcularSubtotal();
+            const valorDesconto = subtotal * desconto;
+            const total = subtotal + delivery - valorDesconto;
+            
+            document.getElementById('subtotal').textContent = formatarMoeda(subtotal);
+            document.getElementById('delivery').textContent = formatarMoeda(delivery);
+            document.getElementById('total').textContent = formatarMoeda(total);
+            
+            if (desconto > 0) {
+                document.getElementById('discountRow').classList.remove('hidden');
+                document.getElementById('discount').textContent = `- ${formatarMoeda(valorDesconto)}`;
+            } else {
+                document.getElementById('discountRow').classList.add('hidden');
+            }
+        }
+
+        // Handler do cupom
+        document.getElementById('applyCoupon').addEventListener('click', () => {
+            const cupom = document.getElementById('couponInput').value.trim().toUpperCase();
+            const couponMessage = document.getElementById('couponMessage');
+            
+            if (!cupom) {
+                couponMessage.textContent = 'Digite um cupom válido';
+                couponMessage.className = 'text-sm mb-2 text-red-600';
+                couponMessage.classList.remove('hidden');
+                return;
+            }
+            
+            if (cuponsValidos[cupom]) {
+                const valorCupom = cuponsValidos[cupom];
+                
+                if (valorCupom === 'frete') {
+                    delivery = 0;
+                    couponMessage.textContent = 'Cupom aplicado! Frete grátis 🎉';
+                    couponMessage.className = 'text-sm mb-2 text-green-600';
+                } else {
+                    desconto = valorCupom;
+                    couponMessage.textContent = `Cupom aplicado! ${(valorCupom * 100)}% de desconto 🎉`;
+                    couponMessage.className = 'text-sm mb-2 text-green-600';
+                }
+                
+                couponMessage.classList.remove('hidden');
+                atualizarResumo();
+                showToast('Cupom aplicado com sucesso!', 'success');
+            } else {
+                couponMessage.textContent = 'Cupom inválido';
+                couponMessage.className = 'text-sm mb-2 text-red-600';
+                couponMessage.classList.remove('hidden');
+                showToast('Cupom inválido', 'error');
+            }
+        });
+
+        // Handler do checkout
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (carrinho.length === 0) {
+                showToast('Seu carrinho está vazio!', 'error');
+                return;
+            }
+            
+            const subtotal = calcularSubtotal();
+            const valorDesconto = subtotal * desconto;
+            const total = subtotal + delivery - valorDesconto;
+            
+            console.log('Checkout:', {
+                produtos: carrinho,
+                subtotal: subtotal,
+                entrega: delivery,
+                desconto: valorDesconto,
+                total: total
+            });
+            
+            showToast('Pedido realizado com sucesso!', 'success');
+            
+            // Simular redirecionamento após 2 segundos
+            setTimeout(() => {
+                // window.location.href = 'confirmacao.html';
+                alert('Pedido confirmado! Total: ' + formatarMoeda(total));
+            }, 2000);
+        });
+
+        // Renderizar carrinho ao carregar a página
+        renderizarCarrinho();
+
+        // Tornar função global para uso no onclick
+        window.removerProduto = removerProduto;
+    </script>
+</body>
+
+</html>
